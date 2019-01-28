@@ -1,0 +1,3 @@
+<launch>
+ <node pkg="obstacle_input_node" type="obstacle_input_node_node" name="obstacle"/>
+</launch>

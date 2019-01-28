@@ -1,0 +1,4 @@
+<launch>
+<node pkg="camera_input_node" name="camera_input" type="main.py"/>
+
+</launch>

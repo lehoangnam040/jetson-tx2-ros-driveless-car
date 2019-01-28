@@ -1,0 +1,17 @@
+<launch>
+ <node respawn="true" pkg="joy"
+	type="joy_node" name="joy_control">
+  <param name="dev" type="string" value="/dev/input/js0"/>
+  <param name="deadzone" value="0.05"/>
+ </node>
+
+ 
+
+ <node pkg="ps3control" type="main.py" name="ps3controller" />
+ <include file="$(find astra_launch)/launch/astra.launch"/>
+ <include file="$(find camera_input_node)/launch/camera_input.launch"/>
+ <include file="$(find obstacle_input_node)/launch/obstacle.launch"/>
+ <include file="$(find mpu_9250)/launch/mpu_9250.launch"/>
+
+ 
+</launch>
